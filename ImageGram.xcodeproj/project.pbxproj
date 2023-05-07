@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		44888FCC29FECDE50052144C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCB29FECDE50052144C /* AppDelegate.swift */; };
 		44888FCE29FECDE50052144C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCD29FECDE50052144C /* SceneDelegate.swift */; };
-		44888FD029FECDE50052144C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCF29FECDE50052144C /* ViewController.swift */; };
+		44888FD029FECDE50052144C /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCF29FECDE50052144C /* ImagesListViewController.swift */; };
 		44888FD329FECDE50052144C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44888FD129FECDE50052144C /* Main.storyboard */; };
 		44888FD529FECDE70052144C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44888FD429FECDE70052144C /* Assets.xcassets */; };
 		44888FD829FECDE70052144C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44888FD629FECDE70052144C /* LaunchScreen.storyboard */; };
+		44BDA27E2A0679E70088258B /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDA27D2A0679E70088258B /* ImagesListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44888FC829FECDE50052144C /* ImageGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44888FCB29FECDE50052144C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44888FCD29FECDE50052144C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44888FCF29FECDE50052144C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44888FCF29FECDE50052144C /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
 		44888FD229FECDE50052144C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44888FD429FECDE70052144C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44888FD729FECDE70052144C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44888FD929FECDE70052144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44888FDF29FECEEC0052144C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		44888FE029FECEEC0052144C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		44BDA27D2A0679E70088258B /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +58,24 @@
 		44888FCA29FECDE50052144C /* ImageGram */ = {
 			isa = PBXGroup;
 			children = (
+				44BDA27F2A067A370088258B /* ImagesList */,
 				44888FCB29FECDE50052144C /* AppDelegate.swift */,
 				44888FCD29FECDE50052144C /* SceneDelegate.swift */,
-				44888FCF29FECDE50052144C /* ViewController.swift */,
 				44888FD129FECDE50052144C /* Main.storyboard */,
 				44888FD429FECDE70052144C /* Assets.xcassets */,
 				44888FD629FECDE70052144C /* LaunchScreen.storyboard */,
 				44888FD929FECDE70052144C /* Info.plist */,
 			);
 			path = ImageGram;
+			sourceTree = "<group>";
+		};
+		44BDA27F2A067A370088258B /* ImagesList */ = {
+			isa = PBXGroup;
+			children = (
+				44888FCF29FECDE50052144C /* ImagesListViewController.swift */,
+				44BDA27D2A0679E70088258B /* ImagesListCell.swift */,
+			);
+			path = ImagesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +88,7 @@
 				44888FC429FECDE50052144C /* Sources */,
 				44888FC529FECDE50052144C /* Frameworks */,
 				44888FC629FECDE50052144C /* Resources */,
+				4431CE9D2A07D6B300423277 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -136,12 +146,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4431CE9D2A07D6B300423277 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		44888FC429FECDE50052144C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44888FD029FECDE50052144C /* ViewController.swift in Sources */,
+				44888FD029FECDE50052144C /* ImagesListViewController.swift in Sources */,
+				44BDA27E2A0679E70088258B /* ImagesListCell.swift in Sources */,
 				44888FCC29FECDE50052144C /* AppDelegate.swift in Sources */,
 				44888FCE29FECDE50052144C /* SceneDelegate.swift in Sources */,
 			);
@@ -154,7 +186,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				44888FD229FECDE50052144C /* Base */,
-				44888FDF29FECEEC0052144C /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +194,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				44888FD729FECDE70052144C /* Base */,
-				44888FE029FECEEC0052144C /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
