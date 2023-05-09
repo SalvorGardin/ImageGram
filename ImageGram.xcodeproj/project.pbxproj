@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44223EA42A0A64D000E47509 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44223EA32A0A64D000E47509 /* DateFormatter+Extension.swift */; };
 		44888FCC29FECDE50052144C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCB29FECDE50052144C /* AppDelegate.swift */; };
 		44888FCE29FECDE50052144C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCD29FECDE50052144C /* SceneDelegate.swift */; };
 		44888FD029FECDE50052144C /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44888FCF29FECDE50052144C /* ImagesListViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44223EA32A0A64D000E47509 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		44888FC829FECDE50052144C /* ImageGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44888FCB29FECDE50052144C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44888FCD29FECDE50052144C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44223EA22A0A64A300E47509 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				44223EA32A0A64D000E47509 /* DateFormatter+Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		44888FBF29FECDE50052144C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		44888FCA29FECDE50052144C /* ImageGram */ = {
 			isa = PBXGroup;
 			children = (
+				44223EA22A0A64A300E47509 /* Helper */,
 				44BDA27F2A067A370088258B /* ImagesList */,
 				44888FCB29FECDE50052144C /* AppDelegate.swift */,
 				44888FCD29FECDE50052144C /* SceneDelegate.swift */,
@@ -175,6 +186,7 @@
 				44888FD029FECDE50052144C /* ImagesListViewController.swift in Sources */,
 				44BDA27E2A0679E70088258B /* ImagesListCell.swift in Sources */,
 				44888FCC29FECDE50052144C /* AppDelegate.swift in Sources */,
+				44223EA42A0A64D000E47509 /* DateFormatter+Extension.swift in Sources */,
 				44888FCE29FECDE50052144C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,10 @@ class ImagesListViewController: UIViewController {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension ImagesListViewController: UITableViewDataSource {
@@ -42,19 +46,11 @@ extension ImagesListViewController {
         }
 
         cell.cellImage.image = image
-        cell.dateLabel.text = getDate()
+        cell.dateLabel.text = DateFormatter.longDateFormatter.string(from: Date())
 
         let isLiked = indexPath.row % 2 == 0
-        let likeImage = isLiked ? UIImage(named: "FavoritesActive") : UIImage(named: "FavoritesNoActive")
+        let likeImage = isLiked ? UIImage(named: "FavoritesNoActive") : UIImage(named: "FavoritesActive")
         cell.likeButton.setImage(likeImage, for: .normal)
-    }
-
-    func getDate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .none
-
-        return dateFormatter.string(from: Date())
     }
 }
 
