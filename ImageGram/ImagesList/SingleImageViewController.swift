@@ -8,9 +8,9 @@
 import UIKit
 
 final class SingleImageViewController: UIViewController {
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var singleImage: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var backButton: UIButton!
+    @IBOutlet private weak var singleImage: UIImageView!
+    @IBOutlet private weak var scrollView: UIScrollView!
 
     var image: UIImage! {
         didSet {

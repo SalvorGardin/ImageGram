@@ -8,58 +8,87 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+    private lazy var userPicture: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "UserPic")
+        image.translatesAutoresizingMaskIntoConstraints = false
 
-    private var exitButton: UIButton!
+        return image
+    }()
 
-    private var note: UILabel!
-    private var userIDLabel: UILabel!
-    private var userNameLabel: UILabel!
-    private var userPicture: UIImageView!
+    private lazy var exitButton: UIButton = {
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "Exit"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private lazy var userNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Екатерина Новикова"
+        label.textColor = UIColor.ypWhite
+        label.font = UIFont.boldSystemFont(ofSize: 23)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+
+    private lazy var userIDLabel: UILabel = {
+        let label = UILabel()
+        label.text = "@ekaterina_nov"
+        label.textColor = UIColor.ypGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+
+    private lazy var note: UILabel = {
+        let label = UILabel()
+        label.text = "Hello, World"
+        label.textColor = UIColor.ypWhite
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setUserPictureView()
-        setExitButton()
-        setUserNameLabel()
-        setUserIDLabel()
-        setNote()
-
+        initialSetup()
     }
 
-    private func setUserPictureView() {
-        userPicture = UIImageView(image: UIImage(named: "UserPic"))
-        userPicture.translatesAutoresizingMaskIntoConstraints = false
+    private func initialSetup() {
+        setupUserPicture()
+        setupExitButton()
+        setupUserNameLabel()
+        setupUserIDLabel()
+        setupNote()
+    }
 
+    private func setupUserPicture() {
         view.addSubview(userPicture)
-        userPicture.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        userPicture.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
-        userPicture.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        userPicture.heightAnchor.constraint(equalToConstant: 70).isActive = true
+
+        NSLayoutConstraint.activate([
+            userPicture.widthAnchor.constraint(equalToConstant: 70),
+            userPicture.heightAnchor.constraint(equalToConstant: 70),
+            userPicture.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            userPicture.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32)
+        ])
     }
 
-    private func setExitButton() {
-        exitButton = UIButton(type: UIButton.ButtonType.custom)
-        exitButton.setImage(UIImage(named: "Exit"), for: .normal)
-
-        exitButton.translatesAutoresizingMaskIntoConstraints = false
-
+    private func setupExitButton() {
         view.addSubview(exitButton)
 
-        exitButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        exitButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        view.trailingAnchor.constraint(equalTo: exitButton.trailingAnchor, constant: 16).isActive = true
-        exitButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
-        exitButton.leadingAnchor.constraint(greaterThanOrEqualTo: userPicture.trailingAnchor, constant: 0).isActive = true
+        NSLayoutConstraint.activate([
+            exitButton.widthAnchor.constraint(equalToConstant: 44),
+            exitButton.heightAnchor.constraint(equalToConstant: 44),
+            view.trailingAnchor.constraint(equalTo: exitButton.trailingAnchor, constant: 16),
+            exitButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            exitButton.leadingAnchor.constraint(greaterThanOrEqualTo: userPicture.trailingAnchor, constant: 0)
+        ])
     }
 
-    private func setUserNameLabel() {
-        userNameLabel = UILabel()
-        userNameLabel.text = "Екатерина Новикова"
-        userNameLabel.textColor = UIColor.ypWhite
-        userNameLabel.font = UIFont.boldSystemFont(ofSize: 23)
-        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
-
+    private func setupUserNameLabel() {
         view.addSubview(userNameLabel)
 
         NSLayoutConstraint.activate([
@@ -69,12 +98,7 @@ final class ProfileViewController: UIViewController {
         ])
     }
 
-    private func setUserIDLabel() {
-        userIDLabel = UILabel()
-        userIDLabel.text = "@ekaterina_nov"
-        userIDLabel.textColor = UIColor.ypGray
-        userIDLabel.translatesAutoresizingMaskIntoConstraints = false
-
+    private func setupUserIDLabel() {
         view.addSubview(userIDLabel)
 
         NSLayoutConstraint.activate([
@@ -84,14 +108,9 @@ final class ProfileViewController: UIViewController {
         ])
     }
 
-    private func setNote() {
-        note = UILabel()
-        note.text = "Hello, World"
-        note.textColor = UIColor.ypWhite
-        note.translatesAutoresizingMaskIntoConstraints = false
-
+    private func setupNote() {
         view.addSubview(note)
-        
+
         NSLayoutConstraint.activate([
             note.topAnchor.constraint(equalTo: userIDLabel.bottomAnchor, constant: 8),
             note.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
