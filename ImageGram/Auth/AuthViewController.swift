@@ -12,14 +12,14 @@ protocol AuthViewControllerDelegate: AnyObject {
 }
 
 final class AuthViewController: UIViewController {
-    let webViewId = "ShowWebView"
+    private let webViewId = "ShowWebView"
     weak var authViewDelegate: AuthViewControllerDelegate?
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == webViewId {
             guard
                 let webViewViewController = segue.destination as? WebViewViewController
-            else { fatalError("Failed to prepare for \(webViewId)") }
+            else { return }
             webViewViewController.delegate = self
         } else {
             super.prepare(for: segue, sender: sender)

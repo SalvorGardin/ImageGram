@@ -8,6 +8,11 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     private lazy var userPicture: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "UserPic")

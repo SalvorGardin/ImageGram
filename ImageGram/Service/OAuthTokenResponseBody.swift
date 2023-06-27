@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct OAuthTokenResponseBody: Codable {
     let accessToken: String
     let tokenType: String
