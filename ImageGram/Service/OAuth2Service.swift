@@ -57,13 +57,13 @@ extension OAuth2Service {
             + "&&code=\(code)"
             + "&&grant_type=authorization_code",
             httpMethod: "POST",
-            baseURL: defaultBaseURL
+            baseURL: unsplashURL
         )
     }
 }
 
 extension URLRequest {
-    static func makeHTTPRequest(path: String, httpMethod: String, baseURL: URL = defaultBaseURL) -> URLRequest {
+    static func makeHTTPRequest(path: String, httpMethod: String, baseURL: URL = apiUnsplashURL) -> URLRequest {
         var request = URLRequest(url: URL(string: path, relativeTo: baseURL)!)
         request.httpMethod = httpMethod
         return request
