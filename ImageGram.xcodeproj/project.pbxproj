@@ -18,6 +18,14 @@
 		44888FD529FECDE70052144C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44888FD429FECDE70052144C /* Assets.xcassets */; };
 		44888FD829FECDE70052144C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44888FD629FECDE70052144C /* LaunchScreen.storyboard */; };
 		44BDA27E2A0679E70088258B /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BDA27D2A0679E70088258B /* ImagesListCell.swift */; };
+		44E5DB7C2A308A810052D5B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB7B2A308A810052D5B8 /* Constants.swift */; };
+		44E5DB822A38E9C40052D5B8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB812A38E9C40052D5B8 /* AuthViewController.swift */; };
+		44E5DB842A38EAAC0052D5B8 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB832A38EAAC0052D5B8 /* WebViewViewController.swift */; };
+		44E5DB872A4729AE0052D5B8 /* OAuth2Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB862A4729AE0052D5B8 /* OAuth2Service.swift */; };
+		44E5DB892A472A2F0052D5B8 /* OAuth2TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB882A472A2F0052D5B8 /* OAuth2TokenStorage.swift */; };
+		44E5DB8B2A472F770052D5B8 /* OAuthTokenResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB8A2A472F770052D5B8 /* OAuthTokenResponseBody.swift */; };
+		44E5DB8E2A47314C0052D5B8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5DB8D2A47314C0052D5B8 /* SplashViewController.swift */; };
+		44E5DB912A4783E40052D5B8 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 44E5DB902A4783E40052D5B8 /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,13 @@
 		44888FD729FECDE70052144C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44888FD929FECDE70052144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44BDA27D2A0679E70088258B /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		44E5DB7B2A308A810052D5B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		44E5DB812A38E9C40052D5B8 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		44E5DB832A38EAAC0052D5B8 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		44E5DB862A4729AE0052D5B8 /* OAuth2Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Service.swift; sourceTree = "<group>"; };
+		44E5DB882A472A2F0052D5B8 /* OAuth2TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2TokenStorage.swift; sourceTree = "<group>"; };
+		44E5DB8A2A472F770052D5B8 /* OAuthTokenResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenResponseBody.swift; sourceTree = "<group>"; };
+		44E5DB8D2A47314C0052D5B8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E5DB912A4783E40052D5B8 /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +76,7 @@
 			children = (
 				44223EA32A0A64D000E47509 /* DateFormatter+Extension.swift */,
 				441907C82A1D134D00096AF9 /* UIColor+Extensions.swift */,
+				44E5DB7B2A308A810052D5B8 /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -83,6 +100,9 @@
 		44888FCA29FECDE50052144C /* ImageGram */ = {
 			isa = PBXGroup;
 			children = (
+				44E5DB8C2A4731390052D5B8 /* SplashViewController */,
+				44E5DB852A4729930052D5B8 /* Service */,
+				44E5DB802A38E9AD0052D5B8 /* Auth */,
 				441907C12A1C852F00096AF9 /* Profile */,
 				44223EA22A0A64A300E47509 /* Helper */,
 				44BDA27F2A067A370088258B /* ImagesList */,
@@ -106,6 +126,33 @@
 			path = ImagesList;
 			sourceTree = "<group>";
 		};
+		44E5DB802A38E9AD0052D5B8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				44E5DB812A38E9C40052D5B8 /* AuthViewController.swift */,
+				44E5DB832A38EAAC0052D5B8 /* WebViewViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		44E5DB852A4729930052D5B8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				44E5DB862A4729AE0052D5B8 /* OAuth2Service.swift */,
+				44E5DB882A472A2F0052D5B8 /* OAuth2TokenStorage.swift */,
+				44E5DB8A2A472F770052D5B8 /* OAuthTokenResponseBody.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		44E5DB8C2A4731390052D5B8 /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44E5DB8D2A47314C0052D5B8 /* SplashViewController.swift */,
+			);
+			path = SplashViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +170,9 @@
 			dependencies = (
 			);
 			name = ImageGram;
+			packageProductDependencies = (
+				44E5DB902A4783E40052D5B8 /* ProgressHUD */,
+			);
 			productName = ImageGram;
 			productReference = 44888FC829FECDE50052144C /* ImageGram.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +202,9 @@
 				ru,
 			);
 			mainGroup = 44888FBF29FECDE50052144C;
+			packageReferences = (
+				44E5DB8F2A4783E40052D5B8 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+			);
 			productRefGroup = 44888FC929FECDE50052144C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,12 +255,19 @@
 			files = (
 				441907C32A1C854700096AF9 /* ProfileViewController.swift in Sources */,
 				44888FD029FECDE50052144C /* ImagesListViewController.swift in Sources */,
+				44E5DB872A4729AE0052D5B8 /* OAuth2Service.swift in Sources */,
+				44E5DB822A38E9C40052D5B8 /* AuthViewController.swift in Sources */,
 				44BDA27E2A0679E70088258B /* ImagesListCell.swift in Sources */,
+				44E5DB842A38EAAC0052D5B8 /* WebViewViewController.swift in Sources */,
 				441907C92A1D134D00096AF9 /* UIColor+Extensions.swift in Sources */,
 				441907C72A1CB03000096AF9 /* SingleImageViewController.swift in Sources */,
 				44888FCC29FECDE50052144C /* AppDelegate.swift in Sources */,
+				44E5DB8E2A47314C0052D5B8 /* SplashViewController.swift in Sources */,
 				44223EA42A0A64D000E47509 /* DateFormatter+Extension.swift in Sources */,
+				44E5DB8B2A472F770052D5B8 /* OAuthTokenResponseBody.swift in Sources */,
 				44888FCE29FECDE50052144C /* SceneDelegate.swift in Sources */,
+				44E5DB892A472A2F0052D5B8 /* OAuth2TokenStorage.swift in Sources */,
+				44E5DB7C2A308A810052D5B8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +499,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44E5DB8F2A4783E40052D5B8 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44E5DB902A4783E40052D5B8 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E5DB8F2A4783E40052D5B8 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44888FC029FECDE50052144C /* Project object */;
 }
